@@ -1,0 +1,174 @@
+body{
+    width: 100%;
+
+    /*The vh unit stands for viewport height, and is relative to 1% of the height of the viewport.
+                ↓              */
+    height: 100vh;
+
+    margin: 0;
+
+    background-color: #1b1b32;
+
+    /*This sets the text color in body and other elements of the text*/
+    color: white;
+
+    /* Determines our entire forms font and text size*/
+    font-family: Tahoma;
+    font-size: 16px;
+}
+
+h1, p{
+    margin: 1em auto;
+    text-align: center;
+}
+
+
+form{
+    /* Centers Form*/
+    margin: 0 auto;
+
+    /* Defines width (min and max) for our form and an in-between size of 60vw*/
+    max-width: 500px;
+    width: 60vw;
+    min-width: 300px;
+
+    padding: 2em;
+
+
+
+}
+
+/** Controls the borders around the form elements */
+fieldset{
+    border: 0;
+
+    /* Padding shorthand (instead of padding-top, padding bottom) padding: top bottom right left; */
+    padding: 2rem 0 2rem 0;
+
+    /** Creates the borders underneath each fieldset and goes: weight style color; */
+    border-bottom: 3px solid #3b3b4f;
+}
+
+/*The border of the last fieldset element looks a little out of place. You can select the last element of a
+specific type using the last-of-type CSS pseudo-class, like this:
+
+p:last-of-type {
+
+    }
+And this will target the last element.
+
+ */
+fieldset:last-of-type{
+    border-bottom: none;
+}
+
+
+label{
+    display: block;
+
+    /* The rem unit stands for root em, and is relative to the font size of the html element.
+        ↓ */
+    margin: 0.5rem 0;
+}
+
+
+input, textarea, select{
+    margin: 10px 0 0 0;
+
+    /** Width to 100 takes up the entire width of their parent elements */
+    width: 100%;
+
+    min-height: 2em;
+}
+
+/* This makes the input and text area blend in with the background */
+input, textarea{
+    background: #1b1b32 ;
+
+    border: 1px solid #0a0a23;
+
+    /* Sets the text color in the text box as well as setting the text box inner text height */
+    color: #ffffff;
+}
+
+
+
+/*
+Width of unset overrules every element with the class "inline" width.
+This will remove the earlier rule which set all the input elements to width: 100% that was set in
+input, textarea, select type selectors.
+*/
+.inline{
+    width:unset;
+
+    /* top right bottom left*/
+    margin: 0px 0.5em 0px 0px;
+
+    /** personal preference for aligning the buttons */
+    vertical-align: middle;
+}
+
+
+
+/*
+To style the submit button, you can use an attribute selector, which selects an element based on the given attribute value.
+Here is an example:
+          type
+           ↓
+    input[name="password"]
+
+The above selects input elements with a name attribute value of password.
+
+*/
+/* This is all responsible for handling the submit input*/
+input[type="submit"] {
+    display: block;
+    width: 60%;
+
+    /* Centers the submit button */
+    margin: 0 auto;
+
+    height: 2em;
+    font-size: 1.1rem;
+
+    /*Sets button's border color and the background color of the button*/
+    background-color: #3b3b4f;
+    border-color: white;
+
+    /* Separates the fieldset from others and makes the minimum width for the button 300px */
+    min-width: 300px;
+}
+
+/*Makes the input to upload a file input bigger to match the default padding of the other input elements.*/
+input[type="file"]{
+    padding: 1px 2px;
+}
+
+/* Changes the text color of the terms and conditions link to #dfdfe2 */
+a{
+    color: #dfdfe2;
+}
+
+
+/*Ctrl+ Cmd ⌘ + Space bar = emoji key window*/
+
+
+
+
+
+
+
+
+/*
+TODO -> ********************************* NOTES *************************************
+Setting margin to in the body element will remove the scroll wheel
+Refer to https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-forms-by-building-a-registration-form/step-9
+
+
+TODO -> ************* Info On Labels *******************
+As label elements are inline by default, they are all displayed side by side on the same line,
+making their text hard to read. To make them appear on separate lines, add display: block to the label element,
+and add a margin of 0.5rem 0, to separate them from each other.
+
+
+ */
